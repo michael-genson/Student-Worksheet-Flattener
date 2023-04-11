@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "StudentWorksheetFlattener"
+version = "0.1.0"
+description = "Flattens worksheet of student test question responses into consolidated rows"
+authors = ["Michael Genson <71845777+michael-genson@users.noreply.github.com>"]
+license = "GNU"
+[tool.poetry.group.dev.dependencies]
+black = "^23.3.0"
+isort = "^5.12.0"
+mypy = "^1.2.0"
+
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+line_length = 120
+
+[tool.poetry.dependencies]
+python = "^3.10"
+streamlit = "^1.21.0"
+pydantic = "^1.10.7"
