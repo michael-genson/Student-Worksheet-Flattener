@@ -97,12 +97,12 @@ def build_rows_from_session(session: Session, max_domain_count: int, max_questio
 
                 # Domain Fields
                 elif column is OutputColums.question_domain:
-                    for domain in domains:
+                    for domain in domains[:max_domain_count]:
                         row.append(domain.question_domain)
                     pad_row(row, len(domains), max_domain_count)
 
                 elif column is OutputColums.domain_raw_score:
-                    for domain in domains:
+                    for domain in domains[:max_domain_count]:
                         domain_student = domain.domain_students.get(student.student_guid)
                         row.append(str(domain_student.domain_raw_score)) if domain_student else None
                     pad_row(row, len(domains), max_domain_count)
